@@ -1,10 +1,11 @@
 # Python Computing Projects
 Introduction to Computing:
 
-Introduction to Computing (CS 110) is a foundational course in computer science that focuses on the principles and practices of computer programming. It introduces students to the concepts and methodologies required to utilize higher-level programming languages effectively and delves into the program development process. The primary objective of this course is to equip students with the skills necessary to design and implement complex and sizable programs. Due to the extensive nature of the programming exercises, the course is challenging and demands significant commitment and effort.
+CS 110 Introduction to Computing is a foundational course in computer science that focuses on the principles and practices of computer programming. It introduced me to the concepts and methodologies that are required to effectively use higher-level programming languages and also made me dive into the program development process. The primary objective of this course was to teach the skills necessary to design and implement complex and sizable programs. Due to the extensive nature of the programming exercises, the course is challenging and demands significant commitment and effort.
 
 
-Experience I have gained:
+# Experience I have gained
+
 Understand Basic Programming Concepts:
   - Gain a fundamental understanding of variables, data types, operators, control structures, and basic data structures.
 
@@ -21,7 +22,7 @@ Gain Practical Experience:
   - Apply theoretical knowledge in practical settings through substantial programming exercises.
 
 
-Course structure:
+# Course structure
 Introduction to Programming Concepts
   - Basics of a high-level programming language.
   - Understanding the structure and syntax of code.
