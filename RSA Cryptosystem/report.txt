@@ -1,0 +1,84 @@
+1. Enter the number of hours it took you to complete the project between
+   the <<< and >>> signs below (eg, <<<10>>>).
+
+   <<< 15 >>>
+   
+2. Enter the difficulty level (1: very easy; 5: very difficult) of the project
+   between the <<< and >>> signs below (eg, <<<3>>>).
+
+   <<< 5 >>>
+
+3. Provide a short description of how you approached each problem, issues you 
+   encountered, and how you resolved those issues.
+
+   Problem 1 (RSA Library)
+      Approach: Creating the functions in the RSA library took patience and a lot of effort because I ran into many problems while creating the functions.
+      My first major mistake was I started right away coding in rsa.py without a proper plan or understanding of the problem.
+      My code became all sloppy, and none of the functions were working.
+      Another mistake was I created another function called isPrime, to check if a value was prime or not and was not aware I wasn't supposed to add more functions in the library.
+      I ended up starting from scratch again, but this time ended up writing the functions step by step and calling them from another test file to see if the recursion worked.
+      I read the problem several times, got a good understanding of how to use recursion and how to write my code, and slowly created my functions in the RSA library using the checklist hints.
+      I started off by working on functions like encrypt and decrypt which basically returned a value of an equation.
+      I then worked on primes, sample, and choice, which will be later used in the main function keygen.
+      Allowing me to plan ahead and create an approach to the program gave me a better understanding of how the recursion worked.
+      Then carefully following the checklist hints, and using the other functions in the RSA library, I constructed the keygen function which at the end returned the values of n, e, and d.
+
+      Issues and resolution: As I mentioned before, I directly started by coding in the rsa.py file without a proper plan, and I ended up with sloppy functions that weren't working.
+      I started by understanding the question properly and planning my approach. The main issue I ran into was how to implement finding prime numbers.
+      I created another function called isPrime to check if a number was prime or not, but I was aware I wasn't allowed to do that.
+      I then implemented that same code in the primes function, which returns the list of primes from a certain range.
+      And I needed to check if e, in the keygen function was prime, and for that, I used primes and choice to select a random prime number.
+      My unorganized planning resulted in sloppy code, so I ended up restarting. I worked my way up, creating the functions by calling them with a test file to see if the recursion was successful.
+      In the end, I was successfully able to create working functions in the RSA library. The checklist hints, the textbook, and practice problems helped significantly.
+
+   Problem 2 (Keygen Program)
+      Approach: I started the program by understanding the problem thoroughly and making sure the RSA library was successfully working.
+      I first accepted two int command-line arguments lo and hi.
+      I then set list equal to rsa.keygen(lo, hi), which will use the keygen function in the RSA library and return the public and private keys, n, e, and d.
+      I separated all the values in the list into three separate values. I finally outputted the three values in the tuple, separated by a space.
+
+      Issues and resolution: This was a simple program as I only needed to receive the three values in the tuple, using the keygen function, and then output them neatly separated by a space.
+      I didn't face any issues or problems with this program. The checklist hints, the textbook, and practice problems helped significantly.
+
+   Problem 3 (Encryption Program)
+      Approach: I started the program by understanding the problem thoroughly and making sure the RSA library was successfully working.
+      I created two int command-line arguments that accept n and e. I then set width to the number of bits per character using the bitLength function in the RSA library.
+      Msg receives the user input message. Using a for loop, for each c in the message, I used ord() to convert c into an integer.
+      I then used the encrypt function in the RSA library to encrypt x and set that equal to ans.
+      Last but not least, I outputted the encrypted value as a width-long binary string, using the dec2bin function in the RSA library. The last line added a new line character.
+
+      Issues and resolution: One major problem I faced in the encrypt program was understanding the steps in the checklist because I was confused when to use the bitLength function and dec2bin function.
+      Although the checklist helps a lot, it was a struggle to understand how to write the program correctly and how to use the correct functions.
+      Other than that I had minor bugs and issues, which I was able to fix as I reviewed my code.
+      The checklist hints, the textbook, and practice problems helped significantly.
+
+   Problem 4 (Decryption Program)
+      Approach: I started the program by understanding the problem thoroughly and making sure the RSA library was successfully working.
+      I first started to create two int command-line arguments that would receive n and d as user input.
+      Width again was set equal to the number of bits using the bitLength function. Msg was the message of the user inputs.
+      In the checklist, it asked to set "l" = length of the message, but "l" was an ambiguous variable, so I instead replaced it with variable length.
+      Length equals the length of the message. Using a for loop, for i in range from [0, length - 1), incrementing by width, I set s equal to a substring of message from i to i + width.
+      I then set y equal to binary string s converted to a decimal using the function bin2dec from the RSA library.
+      After decrypting y, using the decrypt function from the library, I outputted the decrypted answer using chr(), because I had to output the character corresponding to the decrypted value.
+
+      Issues and resolution: One major problem I faced in the decrypt program was understanding the steps in the checklist because I was confused about how to use the functions in the library.
+      The functions in the library seemed to work fine, but when implementing it into the decrypt program, the program wouldn't output anything. I tried fixing my code by writing it again, slowly understanding it, and I was able to make it work.
+      Another issue I faced was creating a substring of the message, which I was mistakenly using the function sample. I then realized my mistake, because the function sample would shuffle my list, and I instead implemented substring the regular way.
+      Other than that I had minor bugs and issues, which I was able to fix as I reviewed my code. The checklist hints, the textbook, and practice problems helped significantly.
+
+4. Did you receive help from anyone? List their names, status (classmate, 
+   CS110 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   ----               ------       -------------
+
+   Richard Anarfi     TA           Discussion Class
+   Saradhi Valluru    Father       Fixing bugs and mistakes in rsa library
+   Dennis Fuentes     Classmate    Understanding how to call functions in library (recursion)
+
+5. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+
+   I still have a lot to learn about recursion, but this was an exciting and challenging project.
+   After making my program finally work, it's safe to say I enjoyed doing the project and understanding how to create a library and call functions.

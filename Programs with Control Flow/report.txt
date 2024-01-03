@@ -1,0 +1,187 @@
+1. Enter the number of hours it took you to complete the project between
+   the <<< and >>> signs below (eg, <<<10>>>).
+
+   <<< 14 >>>
+
+2. Enter the difficulty level (1: very easy; 5: very difficult) of the project
+   between the <<< and >>> signs below (eg, <<<3>>>).
+
+   <<< 4 >>>
+
+3. Provide a short description of how you approached each problem, issues you 
+   encountered, and how you resolved those issues.
+
+   Problem 1 (Wind Chill)
+      Approach: The first step I did was to read the question properly and understand the problem thoroughly.
+      After understanding the problem, I started by creating two float command-line arguments, float t, and float v.
+      After the user inputs the values for float t, the temperature, and float v, the speed,
+      the code had to check if the inputs given were in the correct boundaries.
+      The value of t cannot be greater than 50, and the value of v cannot be less than or equal to 3.
+      To simply check, I integrated if-else statements. If t is greater than 50, it will display the given message to the user.
+      If v is less than or equal to 3, it will display the given message to the user. After the correct inputs, within boundaries,
+      for t and v are given, the values will be inputted into the formula to compute the value of w.
+      After w is calculated, w is outputted as the final answer.
+
+      Issues and resolution: I didn't face any coding issues, but I did face issues with the pycodestyle.
+      It was easy to integrate the if-else statements in the wind_chill problem because I understood the control flow.
+      The formatting and spacing for the code were the only issues I faced.
+
+   Problem 2 (Day of the Week)
+      Approach: The first step I did was to read the question properly and understand the problem thoroughly.
+      After understanding the problem, I started by creating three integer command-line arguments, int m, int d, and int y.
+      After creating command-line arguments, I then integrated the given formulas to find y0, x0, and m0, which will all be used to find the value of dow.
+      If the value of dow is 0, then it is a Sunday. If the value of dow is 1, then it is a Monday, etc.
+      I created if-elif statements to output the correct final answer depending on the value of dow.
+      The if-elif statements will then output the correct final answer depending on the value of dow from 0 through 6.
+
+      Issues and resolution: The major problem I faced was that I kept getting the final answer as blank.
+      I typed the formulas correctly and there were no issues with the if-elif statements, but I got every answer as blank.
+      I then realized I forgot to put "int" in front of the dow formula. If the answer wasn't an integer,
+      then the output will most of the time result in blank, because the number isn't 0 to 6.
+      Another major problem I faced was that I forgot to integrate floor division.
+      I used regular division, and some of the answers were correct, while others weren't.
+      I replaced all regular division, /, with floor division, //.
+
+   Problem 3 (Playing Card)
+      Approach: The first step I did was to read the question properly and understand the problem thoroughly.
+      After understanding the problem, I started by creating rank and setting that equal to stdrandom.uniformInt(2, 15).
+      This will assign rank a random number from 2 to 14. I then converted rank into a string, which was set to rankStr.
+      I created an if-elif statement stating if rank was a number between 11 to 14, then it would be assigned either a Jack, Queen, King, or Ace depending on the random number.
+      If rank wasn't any number from 11 to 14, then it will still have its random number assigned to it.
+      I then followed the same steps by creating suit and setting that equal to stdrandom.uniform(1, 5).
+      This will assign suit a random number between 1 to 4. I then converted suit to a string, which was assigned as suitStr.
+      Following the same if-elif concept, if suit is assigned a random number between 1 to 4, then it will be assigned either Clubs, Diamonds, Hearts, or Spades depending on the random value.
+      Line 35 will finally output rank and suit as "rankStr of suitStr," which is the final output.
+
+      Issues and resolution: One of the issues I faced was I forgot to convert suit as a string.
+      I later reviewed my code and realized I converted rank as a string but not a suit.
+      To output the final answer in the correct format I had to convert rank and suit both into a string.
+      ex. (rankStr + " of " + suitStr). Other than that, I reviewed a similar card problem in the lecture video to help me do this problem.
+
+   Problem 4 (Root Finding)
+      Approach: The first step I did was to read the question properly and understand the problem thoroughly.
+      After understanding the problem, I started by creating one int command-line argument and two float command-line arguments.
+      The command-line arguments were int k, float c, and float e for epsilon. I then set t = c for our guess.
+      I created a while loop stating while |1 - c/(t^k)| is greater e, then continue with the loop. I used all the given formulas in the checklist.
+      I then created f(t) as ft = (t^k) - c and f(t)' as ft2 = k * t^(k-1). I then set t = t - f(t)/f(t)'.
+      If the while loop is still true, then it will continue. If the while loop is false, then it will break and output the final answer.
+      Line 21 outputs the final answer, t.
+
+      Issues and resolution: I didn't face any major problems while coding for this question.
+      The only issue I had was understanding the problem properly and knowing what the output should be.
+      I read the problem several times and then understood the approach I should take. I used the checklist hints to guide myself.
+
+   Problem 5 (Greatest Common Divisor)
+      Approach: The first step I did was to read the question properly and understand the problem thoroughly.
+      After understanding the problem, I started by creating two int command-line arguments. The command-line arguments were int q and int p.
+      I then had to distinguish which number was the lowest and had to set it to a temporary variable.
+      I used a simple if-else statement stating if p > q, then t = q, else t = p.
+      I then created a range from 1 to t + 1, which has every number from 1 to the lowest number.
+      I had to use % to check if "i" from the range would evenly divide p or q. I stated if p % i == 0 and q % i == 0, then divisor will equal i.
+      This statement checks if "i" from the range is a common divisor.
+      All the numbers in the range will be checked, and if a new common divisor is found, it will replace the existing divisor with the new divisor, "i."
+      Line 22 will output the final answer, divisor, which is the greatest common divisor
+
+      Issues and resolution: I didn't encounter any major issues besides how to approach the problem itself.
+      I used paper and pencil to plan what loops and how to construct the code. After a few trials and errors, I was able to make the code work.
+      I used the hints from the checklist and textbook to guide myself.
+
+   Problem 6 (Fibonacci Number)
+      Approach: The first step I did was to read the question properly and understand the problem thoroughly.
+      After understanding the problem, I started by creating a command-line argument that accepts int n.
+      I then set a and b both to 1, as they are the first two Fibonacci numbers.
+      I created a for loop, for i in range(3, n+1), meaning i will go through all the numbers from 3 to n.
+      Using the temporary variable t, t is set equal to a + b. A is then set equal to b and b is set equal to t.
+      This cycle will continue until the for loop ends, and b which is set equal to t at the end of the for loop will contain the final answer.
+      This loop illustrates the Fibonacci sequence, as the first two numbers are added and is stored as the variable t.
+      The last number added will be used again and is stored as the new value of a, a = b.
+      B is then equal to t, which was the two numbers added previously. And the cycle continues as a, the previous number added, is added to b, the two numbers added, until the loop ends.
+      Line 20 will output the final answer, b.
+
+      Issues and resolution: I didn't encounter any major issues besides understanding what the problem asked for and understanding the Fibonacci concept.
+      I searched up and understood more about the Fibonacci sequence and then started to create my code.
+      I used the hints from the checklist and the textbook to guide me.
+
+   Problem 7 (Sum of Powers)
+      Approach: The first step I did was to read the question properly and understand the problem thoroughly.
+      After understanding the problem, I started by creating two command-line arguments that accept int n and k.
+      I then set total to 0. Using a for loop, I set i in the range from 1 to n. The for loop will go through all the numbers from 1 to n.
+      The total will then equal to total + (i^k). This cycle will repeat until the loop is finished with all numbers from 1 to n.
+      The total will equal the final answer. Line 17 will output the final answer, total.
+
+      Issues and resolution: I didn't have any difficulty or issues with this problem.
+      I used the checklist and textbook to guide myself. The practice problems helped me too.
+
+   Problem 8 (Dragon Curve)
+      Approach: The first step I did was to read the question properly and understand the problem thoroughly.
+      After understanding the problem, I started by creating a command-line argument that accepts int n.
+      I then set dragon and nogard both to "F." I used a for-loop because we can loop through the number of times from 1 to n.
+      So using for i in range(1, n+1), because we want to include n, I then set the temporary variable t to dragon.
+      Since the first loop value of dragon is "F," t is also equal to "F." Then I set the new value of dragon to dragon + "L" + nogard.
+      Adding the strings of dragon in the first loop will be "FLF." I then set the new value of nogard to t + "R" + nogard, which for the next set has "R" instead of "L."
+      The loop will continue depending on the input value of n. After the loop ends, line 19 will output the final answer, the value of dragon.
+
+      Issues and resolution: The one major problem I encountered while coding this problem was understanding the problem itself and how to approach it correctly.
+      I used a paper and pencil to plan out the loop to have a better understanding of how to output the correct answer.
+      I knew I had to use a for-loop with input n. I tried coding and experimenting, and it was a trial and error process until I got the correct answer.
+      I used the practice problems, the textbook, and the checklist hints to figure out the solution.
+
+   Problem 9 (Perfect Numbers)
+      Approach: The first step I did was to read the question properly and understand the problem thoroughly.
+      After understanding the problem, I started by creating a command-line argument that accepts int n. I then created a for-loop stating, for i in range from 2 to n.
+      This loop will test all the numbers from 2 to the nth value if they are perfect numbers or not. I then set the total to 0.
+      I created another for loop stating, for j in range from 1 to i. In the for loop, I added an if statement stating if i % j = 0, then the new total will equal total + j.
+      This for loop basically takes the i value from the outer for loop, which is the number we are testing, and checks if it can be a perfect number or not.
+      The if statements checks if the remainder of i, the number we are testing, divided by j in the loop equals to 0. If it equals 0, then the new value of total will equal total + j.
+      If it doesn't equal 0, the incrementation is ignored. This will proceed until the inner for loop is fully completed.
+      The next if statement tests if i, the number we are testing if it is a perfect number or not, equals the final value of the total.
+      If this statement is true, it will print the perfect number, if it is false, then it will not print the number because it isn't a perfect number.
+      The code will rotate back to line 9, and it will test the next number in line until it reaches up to input n. Line 20 will output all the perfect numbers one by one.
+
+      Issues and resolution: The one major issue I encountered while coding this problem was getting stuck in an infinite loop.
+      I coded my problem and tested it multiple times, but my output always ended up infinitely printing 496.
+      I finally figured out the issue, which was that I misplaced the last if statement in the second for loop.
+      Having the last if-statement in the second for loop resulted in the infinite loop.
+      I fixed the issue by moving the if-statement out of the second for loop, but still keeping it in the first loop.
+      The only other issue I had was understanding how to approach the problem. Eventually, with trial and error, I was able to solve the problem.
+      I used the textbook and checklist hints to guide myself.
+
+   Problem 10 (Ramanujan Numbers)
+      Approach: The first step I did was to read the question properly and understand the problem thoroughly.
+      After understanding the problem, I started by creating a command-line argument that accepts int n. I then set a equal to 1, because 1 <= a.
+      I then created a while loop, while a^3 <= n, the code inside the loop will proceed. I then set b = a + 1, because b is >= a + 1.
+      Inside the first while loop, I embedded another while loop stating, while b^3 <= n - a^3, the code inside the loop will proceed.
+      I set c equal to a + 1 because just like b, c is also >= a + 1.
+      Inside the second while loop, there is a third loop stating, while c^3 <= n, the code inside the third while loop will proceed.
+      I then lastly set d equal to c + 1, because c + 1 <= d.
+      The final while loop is embedded in the third while loop stating, while d^3 <= n - c^3, the code inside the fourth while loop will execute.
+      The if statement in the fourth while loop states, if a^3 + b^3 = c^3 + d^3, then we have found a number which is less than n that can be expressed as the sum of two cubes.
+      Line 29 outputs the final answer if the if statement is true, per format with the 2 different sums of cubes.
+      In the while loops, a, b, c, d will all increment by one, until the while loop ends.
+
+      Issues and resolution: The issues and problems I faced while doing this question were understanding the problem itself, and finding the correct approach for this particular problem.
+      Problem 10 was the most difficult problem out of all. Using the hints in the checklist, I knew my approach had to be while loops embedded in one another.
+      I used paper and pencil to plan out the layout of the loops. After multiple attempts, I was able to solve the problem.
+      Another problem I witnessed was not formatting the loops correctly and having incrementations in the wrong place. This resulted in infinite loops.
+      To fix this issue, I added comments and correct indentations to make sure each code was in the correct loop.
+      Last but not least, outputting the final answer in the correct format was not difficult but stressful.
+      With trial and error, I added strings together to output the desired answer. In my first attempts at this problem, I coded blindly while using the hints in the checklist.
+      I created wrong while loops with the given hints. I had to plan out accordingly to make myself understand a better way.
+
+4. Did you receive help from anyone? List their names, status (classmate, 
+   CS110 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   ----               ------       -------------
+
+   Richard Anarfi     TA           Discussion Session / Questions Answered
+   Saradhi Valluru    Father       Discussing how to approach problem 10 and what is the best method.
+
+5. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+
+   This was a big step up from project 1.
+   I was able to learn and grasp concepts from the lectures, but when it comes to applying and actually coding, it took me a lot of effort and time.
+   I learned a lot from this project and did enjoy it a little bit.
+   Problem 10 took me the longest time to do and understand, but overall a great project.

@@ -1,0 +1,90 @@
+1. Enter the number of hours it took you to complete the project between
+   the <<< and >>> signs below (eg, <<<10>>>).
+
+   <<< 16 >>>
+   
+2. Enter the difficulty level (1: very easy; 5: very difficult) of the project
+   between the <<< and >>> signs below (eg, <<<3>>>).
+
+   <<< 4 >>>
+
+3. Provide a short description of how you approached each problem, issues you 
+   encountered, and how you resolved those issues.
+
+   Problem 1 (Particle Representation)
+      Approach: The first step I took to approach this problem was understanding the problem thoroughly.
+      After reading the writeup and checklist, I first created x and y coordinates as floats, setting them equal to 0.
+      I then set pixels to 0 as an integer. For add(self, x, y), I used the idea of running average to update coordinates x and y.
+      I incremented pixels by 1, as said in the checklist. Def mass(self) only returned pixels so I returned self._pixels.
+      Last but not least, I integrated the Euclidean distance between the center of mass of blob in def distanceTo(self, other).
+      I returned the value of the Euclidean distance. I made sure to use pycodestyle to check the style of my code.
+
+      Issues and resolution: I didn't face any major issues while coding for this problem.
+      The only issue I faced was using the idea of running average to update the center of mass.
+      I didn't know what the concept was, but after searching on google, I got a good idea of the formula of running average.
+      I also had trouble integrating the Euclidean distance, but the discussion session helped me clear my doubts.
+      Other than that, I used the checklist hints and the textbook to help me solve this problem.
+
+   Problem 2 (Particle Identification)
+      Approach: The first step I took to approach this problem was understanding the problem thoroughly.
+      After reading the writeup and checklist, I started by initializing an empty list, naming it self._blobs.
+      I also created x for pic width and y for pic height, using the functions pic.width(), and pic.height().
+      I created a 2D list of booleans called marked, which have the same dimensions as pic.
+      Then using a for loop, I enumerated the pixels of pic, created a Blob object called blob, and added blob to blobs if its mass wasn't zero.
+      In getBeads(self, pixels), I returned a list of Blobs from blobs that have a mass greater than or equal to pixels using a temporary list, and a for loop.
+      In _findBlob(), I set the base cases if i < 0 or i >= pic width return, and if j < 0 or j >= pic height return, indicating return if pixels are out of bounds.
+      Other base cases I implemented were if marked[i][j], return, and if luminance is < tau, return. After that, I marked the pixels and added the pixels to blob.
+      Last but not least, I recursively called self._findBlob() on the N, E, W, S pixels.
+
+      Issues and resolution: The first issue I faced was understanding the problem, and how to approach the problem.
+      After reading and analyzing it, I fully understood the problem, and I approached it step by step.
+      Creating the base cases for _finBlob() gave me the most trouble, but after some trial and errors, I was able to make the code work.
+      Other than that, I used the checklist hints, discussion session, and the textbook to help me solve this problem.
+
+   Problem 3 (Particle Tracking)
+      Approach: The first step I took to approach this problem was understanding the problem thoroughly.
+      After reading the writeup and checklist, I started by accepting one int command-line argument as pixels, and two float command-line arguments as tau and delta.
+      Jpg_files are a sequence of filenames accepted to check. I then got a list of beads, constructing a BlobFinder object, which was named prevBeads, that have at least pixels Pixels.
+      I used a for loop to get a list of beads, using a BlobFinder object, named currBeads, that also have at least pixels Pixels.
+      I then used a for loop again to find for each currBead in CurrBeads, I found a prevBead from prevBeads that is less than or equal to delta.
+      If the bead was found, I wrote the distance to currBead using the string format '%4f\n.'
+      Last but not least I wrote a newline character and set prevBeads equal to currBeads.
+
+      Issues and resolution: The first issue I faced was understanding the problem and how to approach the problem.
+      How to approach was a difficult task, but my TA Richard Anarfi helped me understand the problem properly during the discussion session.
+      I also had trouble while coding, but with trial and error, I was able to fix minor issues and was able to make my program work.
+      I had to go back through my exercise problems to refresh my mind, but the checklist, the textbook, and the exercise problems helped me solve this problem.
+
+   Problem 4 (Data Analysis)
+      Approach: The first step I took to approach this problem was understanding the problem thoroughly.
+      After reading the write-up and checklist, I started my initializing the values. I set R, T, ETA, RHO all to the appropriate values.
+      I created P_TO_M as a value to multiple to convert pixels to meters.
+      I then set values to read all floats from the output of the bead_tracker.py program.
+      The variable n was set equal to the length of values and var was set equal to 0.
+      Using a for loop, I converted each float value in values from pixels to meters, using P_TO_M, and also solved the var using a formula.
+      I then found k, which was Boltzmann's Constant, using the given formula and the new values.
+      After k was found, I then found Avogadro's Constant by using (R / k).
+      Last but not least, I outputted the two constants in scientific notation, using the string format '%e,' separated by a space.
+
+      Issues and resolution: I didn't face that many issues in this problem.
+      The problem was straight forward as I needed to receive the output from the previous program, convert pixels to decimals, and find Boltzmann's and Avogadro's constants using the given formulas.
+      The major issue I faced with this problem was getting the correct output. My output for this program gave two constants which were close to the outputs in the writeup but still didn't equal each other.
+      I tried fixing and tweaking my code, but I wasn't able to find a solution to this problem.
+      I am not sure if it was because of the previous program, or data_analysis itself, but on Gradescope, my bead_tracker program showed no issue, and I followed all steps.
+      Let me know what my mistake because unfortunately, I wasn't able to catch my error. Other than that, the checklist, discussion session, and textbook helped me solve this problem.
+
+4. Did you receive help from anyone? List their names, status (classmate, 
+   CS110 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   ----               ------       -------------
+
+   Richard Anarfi     TA           Discussion Class
+
+5. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+
+   I consider project 5 to be a good project. It was challenging at first, but once I started understanding the problems and the exercises, I was able to solve the project problems.
+   It was unfortunate that I wasn't able to get the correct values for data_analysis.py, but I tried my best to find the error and fix it.
+   I hope to receive feedback on my code and let me know where my error was. I am looking forward to it.

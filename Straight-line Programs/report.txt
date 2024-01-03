@@ -1,0 +1,136 @@
+1. Enter the number of hours it took you to complete the project between
+   the <<< and >>> signs below (eg, <<<10>>>).
+
+   <<< 6 >>>
+   
+2. Enter the difficulty level (1: very easy; 5: very difficult) of the project
+   between the <<< and >>> signs below (eg, <<<3>>>).
+
+   <<< 3 >>>
+
+3. Provide a short description of how you approached each problem, issues you 
+   encountered, and how you resolved those issues.
+
+   Problem 1 (Day of the Week)
+      Approach: The approach I took for this question was first understanding the question in the
+      writeup and using the hints in the checklist.
+      Then following the checklist hints, I created three integers where the user will input values into integers m, d, and y.
+      Then I used given formulas to calculate the day of the week using user inputs.
+      Lines 10-14 code consists of formulas to find the final output, which is the day of the week.
+      The last line of code prints the final answer after the computation is done.
+
+      Issues and resolution: I didn't encounter any issues in this question. I used my knowledge from the python textbook and the practice problems.
+
+   Problem 2 (Mercator Projection)
+      Approach: The approach I took for this question was first understanding the question in the writeup and using the hints in the checklist.
+      I created 2 float command-line arguments in which the user will input latitude and longitude in degrees.
+      I then converted the latitude input from degrees to radians on line 10.
+      The second input longitude doesn't need to be converted to radians as there is no computation required for that input.
+      I then created variables x and y. Variable x is just the longitude input while variable y consisted of inputting the given latitude into the given formula.
+      I used the math library for sin and logarithmic computation. The final line of code, line 17, prints the final output x and y after the computation is done.
+
+      Issues and resolution: The main issue I faced while doing this question was outputting the final answer correctly.
+      I was trying to output two float numbers with a space in the middle. With my practice, I was trying to add a space when printing the final output.
+      Little did I know, I couldn't add float and strings together. ex. [stdio.writeln(x + ' ' + y)].
+      I first created three stdio.writeln which will output the answers and space in the middle one at a time.
+      I later found an easier way, which was to print the float outputs as a string. That would make it easier to add a space string in the middle of the numbers.
+      The final method I used to output my answer was [stdio.writeln(str(x) + ' ' + str(y))].
+
+   Problem 3 (Great Circle Distance)
+      Approach: The approach I took for this question was first understanding the question in the writeup and using the hints in the checklist.
+      I created 4 float command-line arguments, which were float x1, y1, x2, y2. After the user inputs the numbers, I then converted all float values to radians on lines 12-15.
+      Using the given formula, I inputted all the values in radians, which will give the distance d. I used the math library for arccos and sin computation.
+      After the computation, I created the new value of d equal to 111 times d converted to degrees, line 21. The last line of code prints out the final value of d.
+
+      Issues and resolution: The problem I encountered in this question was how to use the function arccos.
+      I was having trouble using that particular function in the math library.
+      I was using math.arccos() rather than math.acos(). I later realized my mistake and fixed it.
+
+   Problem 4 (Wind Chill)
+      Approach: The approach I took for this question was first understanding the question in the writeup and using the hints in the checklist.
+      I created 2 float command-line arguments, which were float t and v representing temperature and speed.
+      I then inputted the values t and v into the given formula to get the value of w. The last line of code prints the final output w.
+
+      Issues and resolution: I didn't encounter any issues in this question. I used my knowledge from the python textbook and the practice problems.
+
+   Problem 5 (Gravitational Force)
+      Approach: The approach I took for this question was first understanding the question in the writeup and using the hints in the checklist.
+      I created 3 float command-line arguments, which were float m1, m2, and r. I then set the value of G equal to 6.674*(10^-11), which was given in the writeup.
+      I then inputted values m1, m2, r, and G into the given formula to get value f. The last line of code is printing the final output, which is f.
+
+      Issues and resolution: I didn't encounter any issues in this question. I used my knowledge from the python textbook and the practice problems.
+
+   Problem 6 (Snell's Law)
+      Approach: The approach I took for this question was first understanding the question in the writeup and using the hints in the checklist.
+      I created 3 float command-line arguments, which were float t1 representing theta 1, n1, and n2. I then converted t1 from degrees to radians on line 11.
+      I had to find the formula to get theta 2 using inputs t1, n1, and n2. The given formula showed(sint1/sint2)=(n2/n1).
+      So in order to find theta 2, I needed to get t2 in the formula by itself. Using algebra, theta 2 equals to arcsin*((n1*sint1)/n2).
+      I used the math library for arcsin and sin computation.
+      I used this formula to find t2, on line 14. I then converted t2 from radians to degrees. The last line of code outputted the final value t2.
+
+      Issues and resolution: The major issue I had for this question was understanding the question itself.
+      With the given formula and the instructions, it was very confusing for me on what code I needed to write and what I needed to output.
+      I read the question several times, and then I finally understood I needed to output theta 2 in degrees.
+      I used algebra with the given formula to get theta 2 by itself and I implemented that formula into my code. I also struggled to figure out the right formula for theta 2.
+      After multiple algebraic calculations, I figured out the final formula for theta 2. I implemented it in my code and the rest was simple.
+      Personally, this was the hardest question I encountered.
+
+   Problem 7 (Gambler's Ruin)
+      Approach: The approach I took for this question was first understanding the question in the writeup and using the hints in the checklist.
+      I created 2 int command-line arguments n1 and n2, and 1 float command-line argument, p. The next step I took was defining q. On line 10, I defined q as 1 - p.
+      I then implemented the given formulas to find p1 and p2. The user inputs are inputted into the formula to find values of p1 and p2.
+      The last line outputs the final answer, p1, and p2.
+
+      Issues and resolution: The only issue I had was outputting the answer correctly, just like problem 2, Mercator projection.
+      I was confused on how to output a space between 2 float values.
+      I resolved this issue by outputting the float values as strings, and also adding a space character in the middle.
+      ex. [stdio.writeln(str(p1) + ' ' + str(p2))]
+
+   Problem 8 (Waiting Time)
+      Approach: The approach I took for this question was first understanding the question in the writeup and using the hints in the checklist.
+      I created 2 float command-line arguments, float c, and t. Float c represented the average number of events per unit of time, and float t represented time.
+      I then implemented the given formula on line 10 to find the value of p. I used the math library to use function e^x.
+      The user input of float c and t will be inputted in the formula and will result in the value of p. The last line of code prints out the value p.
+
+      Issues and resolution: I didn't encounter any issues in this question. I used my knowledge from the python textbook and the practice problems.
+
+   Problem 9 (Die Roll)
+      Approach: The approach I took for this question was first understanding the question in the writeup and using the hints in the checklist.
+      I created 1 int command-line argument, which was int n. I then used the stdrandom.uniformInt() function from the stdrandom library.
+      To roll the dice twice with n sides, I created variable roll1 and roll2.
+      For each variable, the stdrandom.uniformInt() function will select a random number ranging from 1 to the n value. I then created a sum variable which is roll1 + roll2.
+      The sum is the final answer and the last line of code prints out the value of the sum.
+
+      Issues and resolution: I didn't encounter any issues in this question rather than a few trial and errors. I used my knowledge from the python textbook and the practice problems.
+
+   Problem 10 (Three Sort)
+      Approach: The approach I took for this question was first understanding the question in the writeup and using the hints in the checklist.
+      I created 3 int command-line arguments, which were int x, y, and z. To first find the minimum number I used the function min().
+      I set variable min equal to min(x, y, z). The minimum number will be stored in variable min. I did the same with the maximum number.
+      I set a variable max equal to max(x, y, z). The maximum number is stored in the max variable. To find the middle number, I created a variable called middle.
+      I set variable middle equal to (x+y+z) - (min+max). This mathematical equation will store the middle number in the variable middle.
+      The last line of code prints out the numbers in the order minimum, middle, and maximum.
+
+      Issues and resolution: The only issue I encountered was how to solve for the middle number.
+      I was easily able to find the minimum and the maximum number. But when it came to finding the middle number, I was confused.
+      I was later able to brainstorm and create a mathematical function that will find the middle number.
+      The equation was (x+y+z) - (min+max). This equation gave me the value of the middle number.
+
+4. Did you receive help from anyone? List their names, status (classmate, 
+   CS110 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   ----               ------       -------------
+
+   Richard Anarfi     TA           Went through problems in the Discussion Class
+
+5. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+
+   I genuinely enjoyed doing my first Python project.
+   This project had a difficulty level of 3 for me and made me critically think for each question.
+   I had trouble sometimes on how to approach the questions, but the checklist helped resolve that.
+   I also used the textbook and practiced how to write straight-line programs.
+   Before starting this project, I was very confused about the fundamentals of Python, but after finishing the project,
+   I feel more comfortable moving to the advanced topics.
